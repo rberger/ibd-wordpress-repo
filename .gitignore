@@ -3,4 +3,5 @@
 metadata.json
 .chef
 client-config
+.DS_Store
 
