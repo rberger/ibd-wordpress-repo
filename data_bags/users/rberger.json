@@ -1,0 +1,9 @@
+{
+  "id": "rberger",
+  "comment": "Robert J. Berger",
+  "uid": 2001,
+  "groups": "sysadmin",
+  "shell": "/bin/bash",
+  "openid": "rberger.myopenid.com",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCVwE5Az7jqFd2lJbenSPR6i9VagMUqAQVk5jqBd/4g7mZdi7NHIj19+p952URpQod0JMSutXZO40VGYTROhv2TimaxIa5s6m4Xh+Sektkw9J3GN87mzC0IqZvySMqJSlRd2ePBm1p0ni0hzkIGZnUC9MKzTtyk8JiYaVnw9P76zG7WVWPTDaXPiP6HWAZa2xsSyH5FbDbzjKYwRl8hLUNKUJjOQOkPGaQPjJley8pSNNJ81c6IFJjMQ34p0NB87joTkGaOXsquCjd8D9jpH5ZYbLcUPS52ya4Hvmm4U3ASShnmFM18vfJGG7FRZFnq5WL8uSMUIdyamEATSdH3Dx7f aws_ibd"
+}
