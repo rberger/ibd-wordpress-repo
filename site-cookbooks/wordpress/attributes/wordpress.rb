@@ -1,5 +1,5 @@
-default[:wordpress][:version] = "3.0.1"
-default[:wordpress][:checksum] = "fd76fb7683c32c4f2d65f5b2cd015cb62d19f1017e3b020f34a98d1b480e1818"
+default[:wordpress][:version] = "3.0.4"
+default[:wordpress][:checksum] = "c68588ca831b76ac8342d783b7e3128c9f4f75aad39c43a7f2b33351634b74de"
 default[:wordpress][:blog_updater][:username] = "blog"
 
 ::Chef::Node.send(:include, Opscode::OpenSSL::Password)
