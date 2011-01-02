@@ -9,3 +9,11 @@ default[:wordpress][:blog_updater][:password] = secure_password
 default[:wordpress][:blog_updater][:hash] = nil
 default[:wordpress][:swap_size] = 2
 default[:wordpress][:swap_file] = "/swap_file"
+
+# Not sure why, but had to duplicate this from the main wordpress atttributes
+default[:wordpress][:db][:user] = "wordpressuser"
+default[:wordpress][:db][:password] = secure_password
+default[:wordpress][:keys][:auth] = secure_password
+default[:wordpress][:keys][:secure_auth] = secure_password
+default[:wordpress][:keys][:logged_in] = secure_password
+default[:wordpress][:keys][:nonce] = secure_password

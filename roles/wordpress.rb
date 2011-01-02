@@ -1,6 +1,6 @@
 name "wordpress"
 description "IBD Blog using wordpress"
-recipes "chef::client_service", "users::sysadmins", "sudo", "postfix", "wordpress", "vsftpd"
+recipes "chef::client_service", "users::sysadmins", "sudo", "postfix", "mysql::server", "wordpress", "vsftpd"
 
 override_attributes(
   "postfix" => {"myhostname" => "test.ibd.com", "mydomain" => "ibd.com"},
