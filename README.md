@@ -1,7 +1,8 @@
 Overview
 ========
 
-[NOTE: THIS IS STILL UNDER CONSTRUCTION AND NOT FULLY TESTED YET]
+[NOTE: See blog post with detailed instructions to go with this at 
+http://blog.ibd.com/howto/deploy-wordpress-to-amazon-ec2-micro-instance-with-opscode-chef/]
 
 Set of cookbooks to deploy a wordpress blog to an Amazon EC2 Instance. Mostly made up of stock Opscode Cookbooks.  All the stock cookbooks are in the cookbooks directory. All the customizations are in site-cookbooks. The repo layout is based on the Opscode chef-repo.
 
