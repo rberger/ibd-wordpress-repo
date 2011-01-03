@@ -56,7 +56,7 @@ end
 
 case node[:platform]
 when "centos",
-  if platform_version.to_f >= 5.0
+  if node.platform_version.to_f >= 5.0
     r.run_action(:install)
   else
     package "ruby-mysql" do

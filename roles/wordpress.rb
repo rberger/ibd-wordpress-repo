@@ -1,13 +1,15 @@
 name "wordpress"
 description "Blog using wordpress"
-recipes "chef::client_service", "users::sysadmins", "sudo", "postfix", "mysql::server", "wordpress", "wordpress::blog_user", "wordpress::add_swap", "vsftpd"
+recipes "apt", "build-essential", "chef::client_service", "users::sysadmins", 
+        "sudo", "postfix", "mysql::server", "wordpress", "wordpress::blog_user", 
+        "wordpress::add_swap", "vsftpd"
 
 override_attributes(
   "postfix" => {"myhostname" => "test.ibd.com", "mydomain" => "ibd.com"},
   "authorization" => {
     "sudo" => {
       "groups" => [],
-      "users" => ["rberger", "ubuntu"]
+      "users" => ["rberger_test", "ubuntu"]
     }
   },
   "wordpress" => {
