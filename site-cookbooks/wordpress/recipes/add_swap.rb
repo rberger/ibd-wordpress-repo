@@ -1,12 +1,15 @@
+mb_block_size = 100
+count = (node[:wordpress][:gb_swap_size] * 1024) / mb_block_size
 bash "add_swap" do
   user "root"
   code <<-EOH
-  sudo dd if=/dev/zero of=#{node[:wordpress][:swap_file]} bs=1G count=#{node[:wordpress][:swap_size]}
-  sudo chown root:root #{node[:wordpress][:swap_file]}
-  sudo chmod 600 #{node[:wordpress][:swap_file]}
-  sudo mkswap #{node[:wordpress][:swap_file]}
-  sudo swapon #{node[:wordpress][:swap_file]}
+  dd if=/dev/zero of=#{node[:wordpress][:swap_file]} bs=#{mb_block_size}M count=#{count}
+  chown root:root #{node[:wordpress][:swap_file]}
+  chmod 600 #{node[:wordpress][:swap_file]}
+  mkswap #{node[:wordpress][:swap_file]}
+  swapon #{node[:wordpress][:swap_file]}
   EOH
+  not_if { File.exists?(node[:wordpress][:swap_file]) }
 end
 
 template "/etc/fstab" do
